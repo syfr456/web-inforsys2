@@ -1,0 +1,45 @@
+.ng-container {
+  margin-right: 70px;
+  margin-left: 70px;
+  margin-top: 7rem;
+  margin-bottom: 10px;
+}
+.footer-2 {
+  padding: 20px;
+}
+.uk-container-footer {
+  margin-left: 70px;
+  margin-right: 70px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+.address {
+  img {
+    height: 34px;
+  }
+  p {
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.8;
+  }
+}
+.compFooter {
+  h3 {
+    color: white;
+    font-weight: bold;
+  }
+  a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    transition: ease 0.3s;
+    &:hover {
+      margin-left: 8px;
+      color: rgb(90, 79, 220);
+    }
+  }
+}
+.iconify {
+  font-size: 50px;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.6);
+}

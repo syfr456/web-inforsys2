@@ -1,0 +1,78 @@
+.sofi {
+  padding-bottom: 70px;
+  background-image: url("../../../assets/hero-1-bg-img.png");
+  background-position: 100%;
+  background-repeat: no-repeat;
+}
+.header {
+  font-size: 30px;
+  line-height: 1.4;
+  padding-right: 30px;
+}
+.heading {
+  p {
+    padding-right: 6rem;
+  }
+}
+.content {
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bolder;
+    color: blue;
+  }
+}
+.iconify {
+  color: blue;
+  font-size: 40px;
+  margin-right: 10px;
+}
+.features {
+  background-color: #fbfbff;
+  margin-top: 40px;
+  margin-right: -70px;
+  margin-left: -70px;
+  padding-top: 50px;
+  h1 {
+    font-family: "Mulish", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-shadow: 1px 2px 3px rgb(59 57 80 / 20%);
+  }
+}
+.grid-card {
+  margin: 30px;
+  .margin {
+    margin-top: 20px;
+    &:hover {
+      background-color: #5a4fdc;
+      p,
+      h2 {
+        color: white;
+      }
+      .iconify {
+        color: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .heading {
+    h1 {
+      padding-right: 0;
+    }
+    p {
+      padding-right: 0;
+    }
+  }
+  .features {
+    .headText {
+      padding: 0 20px;
+    }
+  }
+}

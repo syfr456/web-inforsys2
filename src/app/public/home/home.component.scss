@@ -1,0 +1,100 @@
+// .home {
+//   padding-bottom: 70px;
+//   background-image: url("../../../assets/hero-1-bg-img.png");
+//   background-position: 100%;
+//   background-repeat: no-repeat;
+// }
+// .header {
+//   font-size: 52px;
+//   font-weight: 700;
+//   line-height: 1.4;
+//   margin-bottom: 3rem;
+//   text-shadow: 3px 3px 6px rgb(14 10 65 / 25%);
+//   color: #3b3950;
+// }
+// .content {
+//   font-size: 20px;
+//   line-height: 1.8;
+//   font-family: "Mulish", sans-serif;
+// }
+
+// @media (max-width: 900px) {
+//   .header {
+//     p {
+//       font-size: 28px;
+//     }
+//   }
+
+//   .header {
+//     text-align: center;
+//   }
+// }
+.landing-page {
+  .flex {
+    display: flex;
+    justify-content: center;
+    flex: 2;
+  }
+
+  .text {
+    .iconify {
+      font-size: 36px;
+      color: blue;
+    }
+    h1 {
+      color: #3b3950;
+      text-shadow: 3px 3px 6px rgb(14 10 65 / 25%);
+      font-weight: 600;
+      font-size: 45px;
+      line-height: 1.8;
+    }
+    p {
+      color: #9e9cb9;
+      font-size: 17px;
+      // max-width: 590px;
+      padding-bottom: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+  .image {
+    img {
+      flex: 1.5;
+      // max-width: 65%;
+      // margin-left: 10rem;
+    }
+  }
+  .text-muted {
+    color: #9e9cb9;
+    font-size: 15px;
+    margin-bottom: 1.5rem;
+  }
+
+  @media screen and (min-width: 56.26rem) {
+    .max-width {
+      max-width: 25rem;
+    }
+  }
+
+  // when screen is smaller then 900px : execute this code
+  @media screen and (max-width: 56.25rem) {
+    .flex {
+      flex-direction: column;
+
+      .flex-column {
+        .card {
+          margin: 1rem;
+          margin-bottom: 0;
+        }
+      }
+
+      .image {
+        img {
+          margin: 3rem 0;
+        }
+      }
+    }
+    .text {
+      text-align: center;
+    }
+  }
+}

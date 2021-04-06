@@ -1,0 +1,43 @@
+.about-us {
+  padding-bottom: 70px;
+  background-image: url("../../../assets/hero-1-bg-img.png");
+  background-position: 100%;
+  background-repeat: no-repeat;
+  margin-top: 40px;
+}
+.about {
+  background-color: #fbfbff;
+  margin-right: -70px;
+  margin-left: -70px;
+  padding-bottom: 30px;
+}
+.iconify {
+  color: blue;
+  font-size: 40px;
+  margin-right: 10px;
+}
+.margin {
+  margin-top: 15px;
+  &:hover {
+    background-color: #5a4fdc;
+    p,
+    h2 {
+      color: white;
+    }
+    .iconify {
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    p {
+      font-size: 28px;
+    }
+  }
+
+  .header {
+    text-align: center;
+  }
+}

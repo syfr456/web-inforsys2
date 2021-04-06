@@ -1,0 +1,28 @@
+.terms {
+  padding-bottom: 70px;
+  background-image: url("../../../assets/hero-1-bg-img.png");
+  background-position: 100%;
+  background-repeat: no-repeat;
+}
+
+.header {
+  h1 {
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-shadow: 3px 3px 6px rgb(14 10 65 / 25%);
+  }
+  margin-bottom: 30px;
+}
+
+.content {
+  h1 {
+    text-shadow: 1px 2px 3px rgb(59 57 80 / 20%);
+  }
+  p,
+  li {
+    font-family: "Mulish", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}

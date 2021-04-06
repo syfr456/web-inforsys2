@@ -1,0 +1,33 @@
+.iconify {
+  font-size: 36px;
+  color: blue;
+}
+.header {
+  h1 {
+    font-size: 50px;
+    line-height: 1.6;
+  }
+  margin-bottom: 30px;
+}
+.content {
+  h1 {
+    font-size: 36px;
+    line-height: 1.4;
+  }
+}
+.career {
+  background-image: url("../../../assets/hero-1-bg-img.png");
+  background-position: 100%;
+  padding-bottom: 70px;
+  font-family: "Mulish", sans-serif;
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+.aftergrid {
+  margin-top: 20px;
+  p {
+    padding-bottom: 20px;
+  }
+}
