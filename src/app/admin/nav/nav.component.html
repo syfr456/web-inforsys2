@@ -7,9 +7,10 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="(isHandset$ | async) === false"
   >
-    <mat-nav-list>
-      <a mat-list-item routerLink="/admin/blog"> Blog </a>
-      <a mat-raised-button (click)="authservice.signout()">Logout</a>
+    <mat-nav-list *ngIf="authservice.currentUser">
+      <a mat-list-item routerLink="/admin/blogs"> Blog </a>
+      <a mat-list-item routerLink="/admin/message"> Message </a>
+      <a mat-list-item (click)="authservice.signout()">Logout</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -19,9 +20,9 @@
         ><img src="assets/inforsys.png" alt="logo"
       /></a>
       <span class="spacer"></span>
-      <div class="toolbar">
-        <a mat-button routerLink="/admin/blog"> Blog </a>
-
+      <div class="toolbar" *ngIf="authservice.currentUser">
+        <a mat-button routerLink="/admin/blogs"> Blog </a>
+        <a mat-button routerLink="/admin/message"> Message </a>
         <a mat-raised-button (click)="authservice.signout()">Logout</a>
       </div>
       <span class="right"></span>

@@ -1,0 +1,31 @@
+<mat-card>
+  <h3 class="uk-text-center">Form Tambah Artikel</h3>
+  <mat-form-field appearance="outline">
+    <mat-label> Gambar </mat-label>
+    <input type="text" matInput placeholder="Gambar" [(ngModel)]="gambar" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label> Judul </mat-label>
+    <input type="text" matInput placeholder="Judul" [(ngModel)]="judul" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label> Keterangan </mat-label>
+    <input
+      type="text"
+      matInput
+      placeholder="Keterangan"
+      [(ngModel)]="keterangan"
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label> Link </mat-label>
+    <input type="text" matInput placeholder="Link" [(ngModel)]="link" />
+  </mat-form-field>
+
+  <div class="button uk-flex uk-flex-center">
+    <a mat-raised-button (click)="tambah_artikel()">Save</a>
+  </div>
+</mat-card>

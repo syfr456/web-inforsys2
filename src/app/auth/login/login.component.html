@@ -4,46 +4,52 @@
   integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
   crossorigin="anonymous"
 />
-<div class="container">
-  <div class="row justify-content-center p-4">
-    <div class="col-md-6">
-      <form (ngSubmit)="login()">
-        <h3>Login</h3>
-        <div class="form-group p-2">
-          <input
-            type="email"
-            name="email"
-            class="form-control"
-            [(ngModel)]="email"
-            placeholder="Enter email"
-            required
-          />
-        </div>
-        <div class="form-group p-2">
-          <input
-            type="password"
-            name="password"
-            class="form-control"
-            [(ngModel)]="password"
-            placeholder="Enter Password"
-            required
-          />
-        </div>
-        <div class="form-group p-2">
-          <button type="submit" class="btn btn-primary">Login</button>
-          <div class="register">
-            <a href="#" routerLink="/register">Register</a>
+<div
+  class="style"
+  style="
+    background-image: url('https://i.pinimg.com/originals/39/74/6e/39746eea29ef15a08a05e9365c2d6be4.jpg');
+    background-size: cover;
+    background-position: center;
+  "
+>
+  <div class="container">
+    <div class="row justify-content-center align-items-center p-4">
+      <div class="col-md-6">
+        <form (ngSubmit)="login()" appearance="outline">
+          <h3 class="text-center">Login</h3>
+          <div class="form-group p-2">
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              [(ngModel)]="email"
+              placeholder="Enter email"
+              required
+            />
           </div>
-        </div>
-      </form>
-      <div class="form-group">
-        <p *ngIf="errorMessage.length > 0" class="text-danger">
-          {{ errorMessage }}
-        </p>
+          <div class="form-group p-2">
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              [(ngModel)]="password"
+              placeholder="Enter Password"
+              required
+            />
+          </div>
+          <div class="form-group p-2">
+            <button type="submit" class="btn btn-primary">Login</button>
+          </div>
+        </form>
+        <div class="form-group">
+          <p *ngIf="email.length > 0" class="text-danger">
+            {{ errorMessage }}
+          </p>
 
-        <p *ngIf="error.message.length > 0" class="text-danger">
-          {{ error.message }}
-        </p>
+          <p *ngIf="error.message.length > 0" class="text-danger">
+            {{ error.message }}
+          </p>
+        </div>
       </div>
     </div>
   </div>

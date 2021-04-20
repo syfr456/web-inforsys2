@@ -19,7 +19,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialDesign } from '../material/material';
+import { FormsModule } from '@angular/forms';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../../environments/environment';
+import { AuthService } from '../services/auth.service';
+import { BlogComponent } from './blog/blog.component';
 
 const routes: Routes = [
   {
@@ -29,6 +36,10 @@ const routes: Routes = [
       {
         path: 'about',
         component: AboutComponent,
+      },
+      {
+        path: 'blog',
+        component: BlogComponent,
       },
       {
         path: 'career',
@@ -67,17 +78,22 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [PublicComponent, TermsComponent, AboutComponent, ContactComponent, SofiComponent, PisiComponent, PrivacyComponent, CovidComponent, HomeComponent, CareerComponent, NavbarComponent],
+  declarations: [PublicComponent, TermsComponent, AboutComponent, ContactComponent, SofiComponent, PisiComponent, PrivacyComponent, CovidComponent, HomeComponent, CareerComponent, NavbarComponent, BlogComponent],
   imports: [
    RouterModule.forChild(routes),
     CommonModule,
     LayoutModule,
+    FormsModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MaterialDesign
-  ]
+    MaterialDesign,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFirestoreModule,
+  ],
+  providers: [AuthService]
 })
 export class PublicModule { }

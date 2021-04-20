@@ -1,0 +1,19 @@
+<div class="kotak_masuk">
+  <div class="uk-text-center">
+    <h4>Kotak Masuk</h4>
+  </div>
+  <div class="uk-child-width-expand@s">
+    <div *ngFor="let item of contact">
+      <div class="uk-card uk-card-default uk-card-body">
+        <ul class="uk-list">
+          <li>Name: {{ item.name }}</li>
+          <li>Email: {{ item.email }}</li>
+          <li>Message: {{ item.message }}</li>
+        </ul>
+        <button (click)="deleteItem(item.id)" mat-raised-button color="primary">
+          DELETE
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

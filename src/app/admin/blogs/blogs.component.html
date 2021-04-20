@@ -1,0 +1,79 @@
+<div class="button">
+  <a mat-raised-button routerLink="/admin/form">Add Article</a>
+</div>
+
+<div
+  class="uk-grid-small uk-child-width-1-4@s uk-flex-center uk-text-center"
+  uk-grid
+>
+  <div *ngFor="let item of article">
+    <div
+      class="uk-card uk-card-default uk-card-body"
+      *ngIf="!item.edit; else edits"
+    >
+      <div class="card">
+        <img src="{{ item.gambar }}" alt="img" />
+        <h3>{{ item.judul }}</h3>
+        <p>{{ item.keterangan }}</p>
+        <a href="{{ item.link }}"
+          >Lebih Lanjut<span
+            class="iconify"
+            data-icon="mdi:arrow-right"
+            data-inline="false"
+          ></span
+        ></a>
+      </div>
+      <div class="uk-flex uk-flex-center">
+        <a mat-raised-button (click)="edt(item)">Edit</a>
+        <a mat-raised-button (click)="deleteOi(item.id)">Delete</a>
+      </div>
+    </div>
+    <ng-template #edits>
+      <mat-card>
+        <h3 class="uk-text-center">Form Edit Artikel</h3>
+        <mat-form-field appearance="outline">
+          <mat-label> Gambar </mat-label>
+          <input
+            type="text"
+            matInput
+            placeholder="gambar"
+            [(ngModel)]="item.replacegambar"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label> Judul </mat-label>
+          <input
+            type="text"
+            matInput
+            placeholder="Judul"
+            [(ngModel)]="item.replacejudul"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label> Keterangan </mat-label>
+          <input
+            type="text"
+            matInput
+            placeholder="keterangan"
+            [(ngModel)]="item.replaceketerangan"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label> Link </mat-label>
+          <input
+            type="text"
+            matInput
+            placeholder="link"
+            [(ngModel)]="item.replacelink"
+          />
+        </mat-form-field>
+        <div class="button uk-flex uk-flex-center">
+          <a mat-raised-button (click)="item.edit = false">Cancel</a>
+          <a mat-raised-button (click)="edit(item)">Save</a>
+        </div>
+      </mat-card>
+    </ng-template>
+  </div>
+</div>

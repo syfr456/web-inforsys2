@@ -1,0 +1,21 @@
+<div
+  class="uk-grid-small uk-child-width-1-4@s uk-flex-center uk-text-center"
+  uk-grid
+>
+  <div *ngFor="let item of article">
+    <div class="uk-card uk-card-default uk-card-body">
+      <div class="card">
+        <img src="{{ item.gambar }}" alt="img" />
+        <h3>{{ item.judul }}</h3>
+        <p>{{ item.keterangan }}</p>
+        <a href="{{ item.link }}"
+          >Lebih Lanjut<span
+            class="iconify"
+            data-icon="mdi:arrow-right"
+            data-inline="false"
+          ></span
+        ></a>
+      </div>
+    </div>
+  </div>
+</div>

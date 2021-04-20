@@ -1,0 +1,23 @@
+.button {
+  margin-bottom: 12px;
+
+  a:hover {
+    color: #756ce2;
+  }
+}
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: #756ce2;
+  }
+}
+.card {
+  height: 350px;
+}
+img {
+  height: 7rem;
+}
+// .card {
+//   margin-right: 10px;
+// }
